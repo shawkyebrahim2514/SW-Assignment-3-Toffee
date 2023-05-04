@@ -1,5 +1,5 @@
 package com.User;
-
+import com.ShippingCart.*;
 public class Buyer extends User {
     private String address;
     private String phoneNumber;
