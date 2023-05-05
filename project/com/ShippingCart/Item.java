@@ -13,12 +13,12 @@ public class Item {
 
     public Item(){}
     public void view(){
-        System.out.println("Name: " + name);
-        System.out.println("Brand: " + brand);
-        System.out.println("image: " + image);
-        System.out.println("Valid Pieces: " + pieces);
-        System.out.println("Price: " + price);
-        System.out.println(description);
+        System.out.println("Name: " + this.name);
+        System.out.println("Brand: " + this.brand);
+        System.out.println("image: " + this.image);
+        System.out.println("Valid Pieces: " + this.pieces);
+        System.out.println("Price: " + this.price);
+        System.out.println(this.description);
     }
 
     public void update() {
