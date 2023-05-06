@@ -5,15 +5,12 @@ import java.util.Vector;
 
 public class Cart {
     private Vector<Item> items;
-    
 
     public Cart() {
         items = new Vector<Item>();
     }
     
-    /**
-     * @param item
-     */
+    
     public void addItem(Item item) {
         this.items.add(item);
     }

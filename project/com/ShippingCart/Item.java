@@ -85,12 +85,39 @@ public class Item {
     public void setImage(String image) {
         this.image = image;
     }
+
     public void setPieces(int pieces) {
         this.pieces = pieces;
+    }
+    
+    
+    
+    public String getBrand() {
+        return brand;
+    }
+    public String getDescription() {
+        return description;
+    }
+    public String getImage() {
+        return image;
+    }
+    public int getPieces() {
+        return pieces;
+    }
+    public double getDiscount() {
+        return discount;
+    }
+    public QuantityType getQuantityType() {
+        return quantityType;
     }
     public void setPrice(double price) {
         this.price = price - discount;
     }
+
+    public double getPrice() {
+        return this.price;
+    }
+    
     public void setDiscount(double discount) {
         this.discount = discount;
     }
