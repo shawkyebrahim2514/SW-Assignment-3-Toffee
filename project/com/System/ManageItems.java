@@ -15,15 +15,16 @@ public class ManageItems {
     }
 
     public void viewCatalog() {
-    }
-
-    public Item chooseItem() {
         Integer itemCounter = 1;
         for (Item item : items) {
             System.out.println("Item number: " + itemCounter);
             item.view();
             itemCounter++;
         }
+    }
+
+    public Item chooseItem() {
+        viewCatalog();
         System.out.println("Enter the number of the item you want to choose: ");
         Integer itemNumber = AppSystem.input.nextInt();
         if (itemNumber > items.size()) {
