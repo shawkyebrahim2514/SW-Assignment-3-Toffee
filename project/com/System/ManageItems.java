@@ -1,18 +1,38 @@
 package com.System;
 
+import java.util.LinkedList;
+
 import com.ShippingCart.Item;
 
 public class ManageItems {
-    private Item[] items;
+    private LinkedList<Item> items = new LinkedList<>();
 
     // Methods for Users
     public void search() {
+        System.out.println("Enter the name of the item you want to search: ");
+        String itemName = AppSystem.input.nextLine();
+
     }
 
     public void viewCatalog() {
+        Integer itemCounter = 1;
+        for (Item item : items) {
+            System.out.println("Item number: " + itemCounter);
+            item.view();
+            itemCounter++;
+        }
     }
 
-    public void chooseItem() {
+    public Item chooseItem() {
+        viewCatalog();
+        System.out.println("Enter the number of the item you want to choose: ");
+        Integer itemNumber = AppSystem.input.nextInt();
+        if (itemNumber > items.size()) {
+            System.out.println("Invalid item number!");
+            return null;
+        }
+        Item item = items.get(itemNumber - 1);
+        return item;
     }
 
     // Methods for Admins
