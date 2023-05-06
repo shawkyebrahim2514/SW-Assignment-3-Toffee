@@ -1,6 +1,7 @@
 package com.Authentications;
 
 public class Registration {
+    // user object
     private String name;
     private String email;
     private String phoneNumber;
