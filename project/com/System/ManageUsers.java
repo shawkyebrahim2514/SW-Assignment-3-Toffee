@@ -6,11 +6,31 @@ import com.User.Buyer;
 public class ManageUsers {
     private Buyer[] buyers;
     private Admin[] admins;
-    public void checkExistBuyer(){}
-    public void checkExistUser(){}
-    public void addNewUser(){} // revise it
-    public void accessAdmin(){}
-    public void suspendUser(){}
 
+    public boolean checkExistBuyer(String username) {
+        for (Buyer buyer : buyers) {
+            if (buyer.getUsername().equals(username))
+                return true;
+            else
+                return false;
+        }
+    }
 
+    public boolean checkExistUser(String username, String password) {
+        for (Buyer buyer : buyers) {
+            if (buyer.getUsername().equals(username) && buyer.getPassword().equals(password))
+                return true;
+            else
+                return false;
+        }
+    }
+
+    public void addNewUser() {
+    }
+
+    public void accessAdmin() {
+    }
+
+    public void suspendUser() {
+    }
 }

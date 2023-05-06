@@ -28,9 +28,8 @@ public class Buyer extends User {
         
     }
 
-    public void addTocart(Item item) {
-
-    }
+    public void addToCart(Item item){}
+        
 
     public String getAddress() {
         return address;
@@ -79,7 +78,6 @@ public class Buyer extends User {
     public void setGiftVouchers(GiftVoucher[] giftVouchers) {
         this.giftVouchers = giftVouchers;
     }
-    
     
         
 }
