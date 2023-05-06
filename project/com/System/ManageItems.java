@@ -11,7 +11,12 @@ public class ManageItems {
     public void search() {
         System.out.println("Enter the name of the item you want to search: ");
         String itemName = AppSystem.input.nextLine();
-
+        for (Item item : items) {
+            if (item.getName().equals(itemName)) {
+                item.view();
+                return;
+            }
+        }
     }
 
     public void viewCatalog() {
