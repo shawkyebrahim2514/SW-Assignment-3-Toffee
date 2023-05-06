@@ -13,8 +13,11 @@ public class Payment {
     }
 
     private void payByCash(double cost) {
+        System.out.println("The payment will be cassh on delivery :)");
         /* Sorry but I don't know what should I write here as the customer will pay in cash :) */
     }
+
+
     private void payByCredit(double cost) {}
     private void payBySmartWallet(double cost){}
 
@@ -22,15 +25,7 @@ public class Payment {
 
     private void payByLoyalityPoints(double cost) {}
     
-    private void chooseAddress() {
-        System.out.println("Would you like the order to be dlivered in the same address? : yes / no");
-        Scanner in = new Scanner(System.in);
-        String choice = in.nextLine();
-        if (choice == "yes") {
-
-        }
-        in.close();
-    }
+    
     
     public void pay(double cost, String type) {
         Scanner in = new Scanner(System.in);
