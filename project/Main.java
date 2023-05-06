@@ -1,8 +1,9 @@
+import com.System.AppSystem;
 import com.User.Admin;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        System.out.println("I am a Java program.");
+        AppSystem system = new AppSystem();
+        system.displayMenu();
     }
 }
