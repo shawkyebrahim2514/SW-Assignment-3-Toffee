@@ -102,6 +102,9 @@ public class AppSystem {
 
     private void chooseItem() {
         Item item = items.chooseItem();
+        if (item == null) {
+            return;
+        }
         currentBuyer.addToCart(item);
     }
 
