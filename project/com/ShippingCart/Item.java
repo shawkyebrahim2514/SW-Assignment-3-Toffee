@@ -18,6 +18,7 @@ public class Item {
         System.out.println("image: " + this.image);
         System.out.println("Valid Pieces: " + this.pieces);
         System.out.println("Price: " + this.price);
+        System.out.println(" " + this.quantityType);
         System.out.println(this.description);
     }
 
