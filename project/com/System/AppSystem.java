@@ -16,15 +16,19 @@ public class AppSystem {
     public static ManageUsers users = new ManageUsers();
 
     public AppSystem() {
-        registration = new Registration();
+        run();
+    }
+
+    private void run() {
         login = new Login();
+        registration = new Registration();
         System.out.println("Welcome to our system!");
         System.out.println("1- Login");
         System.out.println("2- Register");
         System.out.println("3- View Catalog");
         System.out.println("4- Exit");
         System.out.print("Enter your choice: ");
-        int choice = input.nextInt();
+        int choice = Integer.parseInt(input.nextLine());
         switch (choice) {
             case 1:
                 if (login.login()) {
@@ -37,12 +41,6 @@ public class AppSystem {
             case 2:
                 if (registration.register()) {
                     System.out.println("Registration successful!");
-                    if (login.login()) {
-                        System.out.println("Login successful!");
-                        displayBuyerMenu();
-                    } else {
-                        System.out.println("Login failed!");
-                    }
                 } else {
                     System.out.println("Registration failed!");
                 }
@@ -54,11 +52,12 @@ public class AppSystem {
                 System.out.println("Thank you for using our system!");
                 input.close();
                 System.exit(0);
-                break;
+                return;
             default:
                 System.out.println("Invalid choice!");
                 break;
         }
+        run();
     }
 
     public void displayMenu() {

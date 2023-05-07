@@ -29,7 +29,7 @@ public class Login {
         System.out.println("2. Admin");
         System.out.println("3. Exit");
         System.out.print("Enter your choice: ");
-        int choice = AppSystem.input.nextInt();
+        int choice = Integer.parseInt(AppSystem.input.nextLine());
         switch (choice) {
             case 1:
                 return buyerLogin();

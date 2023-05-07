@@ -10,8 +10,18 @@ public class Buyer extends User {
     private String phoneNumber;
     private Integer loyaltyPoints;
     private Cart cart;
-    private Order lastOrders[];
-    private GiftVoucher giftVouchers[];
+    private LinkedList<Order> lastOrders;
+    private LinkedList<GiftVoucher> giftVouchers;
+
+    public Buyer(String name, String email, String phoneNumber, String address, String username, String password) {
+        super(name, email, username, password);
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.loyaltyPoints = 0;
+        this.cart = new Cart();
+        this.lastOrders = new LinkedList<>();
+        this.giftVouchers = new LinkedList<>();
+    }
 
     private boolean checkValidUpdateInfo() {
         return false;
@@ -82,19 +92,19 @@ public class Buyer extends User {
         this.cart = cart;
     }
 
-    public Order[] getLastOrders() {
+    public LinkedList<Order> getLastOrders() {
         return lastOrders;
     }
 
-    public void setLastOrders(Order[] lastOrders) {
+    public void setLastOrders(LinkedList<Order> lastOrders) {
         this.lastOrders = lastOrders;
     }
 
-    public GiftVoucher[] getGiftVouchers() {
+    public LinkedList<GiftVoucher> getGiftVouchers() {
         return giftVouchers;
     }
 
-    public void setGiftVouchers(GiftVoucher[] giftVouchers) {
+    public void setGiftVouchers(LinkedList<GiftVoucher> giftVouchers) {
         this.giftVouchers = giftVouchers;
     }
 }

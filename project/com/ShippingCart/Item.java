@@ -39,7 +39,7 @@ public class Item {
         System.out.println("8- Discount");
         System.out.println("9- Exit");
         System.out.print("Enter your choice: ");
-        int choice = AppSystem.input.nextInt();
+        int choice = Integer.parseInt(AppSystem.input.nextLine());
         switch (choice) {
             case 1:
                 System.out.println("Please enter the new name: ");
