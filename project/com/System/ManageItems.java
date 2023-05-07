@@ -4,9 +4,11 @@ import java.util.LinkedList;
 
 import com.ShippingCart.Item;
 import com.ShippingCart.ItemCart;
+import com.ShippingCart.Order;
 
 public class ManageItems {
     private LinkedList<Item> items = new LinkedList<>();
+    private LinkedList<Order> orders = new LinkedList<>();
 
     // Methods for Users
     public void search() {
@@ -47,6 +49,10 @@ public class ManageItems {
         }
         item.setPieces(item.getPieces() - pieces);
         return new ItemCart(item, pieces);
+    }
+
+    public void addNewOrder(Order order) {
+        orders.add(order);
     }
 
     // Methods for Admins

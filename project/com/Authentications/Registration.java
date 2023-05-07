@@ -30,7 +30,7 @@ public class Registration {
     }
 
     private  boolean checkValidation(){
-        return false;
+        return true;
     }
 
     private void sendOTP(){

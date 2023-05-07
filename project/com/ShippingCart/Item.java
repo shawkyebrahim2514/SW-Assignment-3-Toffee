@@ -1,8 +1,11 @@
 package com.ShippingCart;
+
 import java.util.Scanner;
 
+import com.System.AppSystem;
+
 public class Item {
-    private  String name;
+    private String name;
     private String brand;
     private String description;
     private String image;
@@ -11,8 +14,10 @@ public class Item {
     private double discount;
     private QuantityType quantityType;
 
-    public Item(){}
-    public void view(){
+    public Item() {
+    }
+
+    public void view() {
         System.out.println("Name: " + this.name);
         System.out.println("Brand: " + this.brand);
         System.out.println("image: " + this.image);
@@ -23,54 +28,79 @@ public class Item {
     }
 
     public void update() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Please enter the product's name: ");
-        String name = in.nextLine();
-        setName(name);
-
-        System.out.println("Please enter the product's Brand: ");
-        String brand = in.nextLine();
-        setBrand(brand);
- 
-        System.out.println("Please enter the product's Description: ");
-        String description= in.nextLine();
-        setDescription(description);
-
-        System.out.println("Please enter the product's Image url: ");
-        String imageUrl= in.nextLine();
-        setImage(imageUrl);
-
-        System.out.println("Please enter the product's name: ");
-        double price = in.nextDouble();
-        setPrice(price);
-        
-        System.out.println("Please enter the product's valid pieces:");
-        int pieces = in.nextInt();
-        setPieces(pieces);
-
-        System.out.println("Please Select the type of quantity you want: ");
-        System.out.println("packages, kilos ?");
-        String type = in.nextLine();
-        switch (type) {
-            case "kilos":
-                setQuantityType(QuantityType.koios);
+        System.out.println("What do you want to update?");
+        System.out.println("1- Name");
+        System.out.println("2- Brand");
+        System.out.println("3- Description");
+        System.out.println("4- Image");
+        System.out.println("5- Price");
+        System.out.println("6- Pieces");
+        System.out.println("7- Quantity Type");
+        System.out.println("8- Discount");
+        System.out.println("9- Exit");
+        System.out.print("Enter your choice: ");
+        int choice = AppSystem.input.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.println("Please enter the new name: ");
+                String name = AppSystem.input.nextLine();
+                setName(name);
                 break;
-            case "packages":
-                setQuantityType(QuantityType.packges);
+            case 2:
+                System.out.println("Please enter the new brand: ");
+                String brand = AppSystem.input.nextLine();
+                setBrand(brand);
                 break;
-            default:
+            case 3:
+                System.out.println("Please enter the new description: ");
+                String description = AppSystem.input.nextLine();
+                setDescription(description);
                 break;
+            case 4:
+                System.out.println("Please enter the new image: ");
+                String image = AppSystem.input.nextLine();
+                setImage(image);
+                break;
+            case 5:
+                System.out.println("Please enter the new price: ");
+                double price = AppSystem.input.nextDouble();
+                setPrice(price);
+                break;
+            case 6:
+                System.out.println("Please enter the new pieces: ");
+                int pieces = AppSystem.input.nextInt();
+                setPieces(pieces);
+                break;
+            case 7:
+                System.out.println("Please Select the type of quantity you want: ");
+                System.out.println("packages, kilos ?");
+                String type = AppSystem.input.nextLine();
+                switch (type) {
+                    case "kilos":
+                        setQuantityType(QuantityType.koios);
+                        break;
+                    case "packages":
+                        setQuantityType(QuantityType.packges);
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case 8:
+                System.out.println("Please enter the new discount: ");
+                double discount = AppSystem.input.nextDouble();
+                setDiscount(discount);
+                break;
+            case 9:
+                return;
         }
-        
-
-        in.close();
-
+        update();
     }
 
     public void setName(String name) {
         this.name = name;
     }
-    
+
     public String getName() {
         return this.name;
     }
@@ -82,6 +112,7 @@ public class Item {
     public void setDescription(String description) {
         this.description = description;
     }
+
     public void setImage(String image) {
         this.image = image;
     }
@@ -89,27 +120,31 @@ public class Item {
     public void setPieces(int pieces) {
         this.pieces = pieces;
     }
-    
-    
-    
+
     public String getBrand() {
         return brand;
     }
+
     public String getDescription() {
         return description;
     }
+
     public String getImage() {
         return image;
     }
+
     public int getPieces() {
         return pieces;
     }
+
     public double getDiscount() {
         return discount;
     }
+
     public QuantityType getQuantityType() {
         return quantityType;
     }
+
     public void setPrice(double price) {
         this.price = price - discount;
     }
@@ -117,10 +152,11 @@ public class Item {
     public double getPrice() {
         return this.price;
     }
-    
+
     public void setDiscount(double discount) {
         this.discount = discount;
     }
+
     public void setQuantityType(QuantityType quantityType) {
         this.quantityType = quantityType;
     }

@@ -1,35 +1,32 @@
 package com.ShippingCart;
 
 import java.util.LinkedList;
-import java.util.Scanner;
+
+import com.System.AppSystem;
 
 public class Cart {
-    private LinkedList<Item> items;
+    private LinkedList<ItemCart> items;
 
     public Cart() {
-        items = new LinkedList<Item>();
+        items = new LinkedList<>();
     }
-    
-    
-    public void addItem(Item item) {
+
+    public void addItem(ItemCart item) {
         this.items.add(item);
     }
 
     public void delete() {
-        Scanner cin = new Scanner(System.in);
         System.out.println("Please enter the Item name: ");
-        String name = cin.nextLine();
+        String name = AppSystem.input.nextLine();
         for (int i = 0; i < this.items.size(); i++) {
-            if (this.items.get(i).getName() == name) {
+            if (this.items.get(i).getItem().getName().equals(name)) {
                 this.items.remove(i);
             }
         }
-        cin.close();
     }
 
-    public LinkedList<Item> confirm() {
-
+    public LinkedList<ItemCart> confirm() {
         return this.items;
     }
-    
+
 }

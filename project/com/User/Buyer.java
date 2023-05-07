@@ -1,7 +1,10 @@
 package com.User;
+
 import java.util.LinkedList;
 
 import com.ShippingCart.*;
+import com.System.AppSystem;
+
 public class Buyer extends User {
     private String address;
     private String phoneNumber;
@@ -10,42 +13,44 @@ public class Buyer extends User {
     private Order lastOrders[];
     private GiftVoucher giftVouchers[];
 
-    private boolean checkValidUpdateInfo(){
+    private boolean checkValidUpdateInfo() {
         return false;
     }
 
-    public void reorder(){
-        
+    public void reorder() {
+
     }
 
-    public void buyGiftVoucher(){
-        
+    public void buyGiftVoucher() {
+
     }
 
-    public void viewHistoryOrders(){
-        
+    public void viewHistoryOrders() {
+
     }
 
-    public void updateInfo(){
-        
+    public void updateInfo() {
+
     }
 
     public void setAddress(String address) {
         this.address = address;
     }
-    
-    public Order addNewOrder(){
-        LinkedList<Item> items = confirmCart();
+
+    public void addNewOrder() {
+        LinkedList<ItemCart> items = this.cart.confirm();
         Order order = new Order(items);
-        //Double cost = order.pay();
-        return null;
+        Double cost = order.calculateCost();
+        Payment payment = new Payment(this);
+        payment.pay(cost, "Cash");
+        AppSystem.items.addNewOrder(order);
     }
 
-    public void addToCart(ItemCart item){
+    public void addToCart(ItemCart item) {
 
     }
-        
-    public void deleteFromCart(Item item){
+
+    public void deleteFromCart(Item item) {
 
     }
 
@@ -91,9 +96,5 @@ public class Buyer extends User {
 
     public void setGiftVouchers(GiftVoucher[] giftVouchers) {
         this.giftVouchers = giftVouchers;
-    }
-    
-    public LinkedList<Item> confirmCart(){
-        return null;
     }
 }

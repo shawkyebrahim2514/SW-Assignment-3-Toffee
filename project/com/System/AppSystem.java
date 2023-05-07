@@ -5,7 +5,6 @@ import com.User.Buyer;
 import java.util.Scanner;
 
 import com.Authentications.*;
-import com.ShippingCart.Item;
 import com.ShippingCart.ItemCart;
 
 public class AppSystem {
