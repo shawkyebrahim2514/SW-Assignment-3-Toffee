@@ -1,15 +1,15 @@
 package com.ShippingCart;
 import com.User.Buyer;
-import java.util.Vector;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Order {
-    private Vector<Item> items;
+    private LinkedList<Item> items;
     private StatusType status;
     private Buyer currentBuyer;
     private String orderAddress;
 
-    public Order(Vector<Item> items) {
+    public Order(LinkedList<Item> items) {
         this.items = items;
         this.status = StatusType.ORDERED;
         System.out.println("Would you like to continue the order or cancel it: yes(confirm) / no(cancel)");

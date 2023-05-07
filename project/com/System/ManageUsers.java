@@ -11,18 +11,16 @@ public class ManageUsers {
         for (Buyer buyer : buyers) {
             if (buyer.getUsername().equals(username))
                 return true;
-            else
-                return false;
         }
+        return false;
     }
 
     public boolean checkExistUser(String username, String password) {
         for (Buyer buyer : buyers) {
             if (buyer.getUsername().equals(username) && buyer.getPassword().equals(password))
                 return true;
-            else
-                return false;
         }
+        return false;
     }
 
     public void addNewUser() {
