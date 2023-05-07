@@ -42,7 +42,11 @@ public class Registration {
     }
 
     public boolean register(){
-        
-      return false;
+        if(checkValidation() && ManageUsers.checkExistBuyer(username, password)){
+            Buyer newBuyer = new Buyer(name, email, phoneNumber, address, username, password);
+            ManageUsers.addNewBuyer(newBuyer); 
+            return true;
+        }   
+        return false;
     }
 }
