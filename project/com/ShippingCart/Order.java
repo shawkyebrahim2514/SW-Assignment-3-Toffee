@@ -9,7 +9,6 @@ public class Order {
     private Buyer currentBuyer;
     private String orderAddress;
 
-
     public Order(Vector<Item> items) {
         this.items = items;
         this.status = StatusType.ORDERED;
