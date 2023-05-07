@@ -5,9 +5,6 @@ public abstract class User {
     private String email;
     private String username;
     private String password;
-<<<<<<< Updated upstream
-    
-=======
 
     public User() {
     }
@@ -55,5 +52,4 @@ public abstract class User {
         this.password = password;
 
     }
->>>>>>> Stashed changes
 }
