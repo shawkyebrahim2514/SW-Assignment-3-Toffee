@@ -14,22 +14,20 @@ public class Registration {
     public Registration() {
         System.out.println("Please enter the following information: ");
         System.out.println( "Name: ");
-        name = input.nextLine();
+        name = AppSystem.input.nextLine();
         System.out.println( "Email: ");
-        email = input.nextLine();
+        email = AppSystem.input.nextLine();
         System.out.println( "Phone Number: ");
-        phoneNumber = input.nextLine();
+        phoneNumber = AppSystem.input.nextLine();
         System.out.println( "Address: ");
-        address = input.nextLine();
+        address = AppSystem.input.nextLine();
         System.out.println( "Username: ");
-        username = input.nextLine();
+        username = AppSystem.input.nextLine();
         System.out.println( "Password: ");
-        password = input.nextLine();
+        password = AppSystem.input.nextLine();
         System.out.println( "Confirm Password: ");
-        confirmPassword = input.nextLine();
+        confirmPassword = AppSystem.input.nextLine();
     }
-
-    
 
     private  boolean checkValidation(){
         return false;

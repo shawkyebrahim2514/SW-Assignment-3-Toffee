@@ -1,11 +1,13 @@
 package com.System;
 
+import java.util.LinkedList;
+
 import com.User.Admin;
 import com.User.Buyer;
 
 public class ManageUsers {
-    private Buyer[] buyers;
-    private Admin[] admins;
+    private LinkedList<Buyer> buyers = new LinkedList<>();
+    private LinkedList<Admin> admins = new LinkedList<>();
 
     public boolean checkExistBuyer(String username) {
         for (Buyer buyer : buyers) {
@@ -23,7 +25,8 @@ public class ManageUsers {
         return false;
     }
 
-    public void addNewUser() {
+    public void addNewBuyer(Buyer newBuyer) {
+        buyers.add(newBuyer);
     }
 
     public void accessAdmin() {

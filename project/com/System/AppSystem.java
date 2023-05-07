@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.Authentications.*;
 import com.ShippingCart.Item;
+import com.ShippingCart.ItemCart;
 
 public class AppSystem {
     public static Scanner input = new Scanner(System.in);
@@ -21,7 +22,8 @@ public class AppSystem {
         System.out.println("Welcome to our system!");
         System.out.println("1- Login");
         System.out.println("2- Register");
-        System.out.println("3- Exit");
+        System.out.println("3- View Catalog");
+        System.out.println("4- Exit");
         System.out.print("Enter your choice: ");
         int choice = input.nextInt();
         switch (choice) {
@@ -34,9 +36,22 @@ public class AppSystem {
                 }
                 break;
             case 2:
-                registration.register();
+                if (registration.register()) {
+                    System.out.println("Registration successful!");
+                    if (login.login()) {
+                        System.out.println("Login successful!");
+                        displayBuyerMenu();
+                    } else {
+                        System.out.println("Login failed!");
+                    }
+                } else {
+                    System.out.println("Registration failed!");
+                }
                 break;
             case 3:
+                items.viewCatalog();
+                break;
+            case 4:
                 System.out.println("Thank you for using our system!");
                 input.close();
                 System.exit(0);
@@ -101,11 +116,11 @@ public class AppSystem {
     }
 
     private void chooseItem() {
-        Item item = items.chooseItem();
-        if (item == null) {
+        ItemCart itemCart = items.chooseItem();
+        if (itemCart == null) {
             return;
         }
-        currentBuyer.addToCart(item);
+        currentBuyer.addToCart(itemCart);
     }
 
     private void displayAdminMenu() {

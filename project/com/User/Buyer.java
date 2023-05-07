@@ -41,7 +41,7 @@ public class Buyer extends User {
         return null;
     }
 
-    public void addToCart(Item item){
+    public void addToCart(ItemCart item){
 
     }
         

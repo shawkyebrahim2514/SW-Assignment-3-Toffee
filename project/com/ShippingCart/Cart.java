@@ -1,13 +1,13 @@
 package com.ShippingCart;
 
+import java.util.LinkedList;
 import java.util.Scanner;
-import java.util.Vector;
 
 public class Cart {
-    private Vector<Item> items;
+    private LinkedList<Item> items;
 
     public Cart() {
-        items = new Vector<Item>();
+        items = new LinkedList<Item>();
     }
     
     
@@ -27,7 +27,7 @@ public class Cart {
         cin.close();
     }
 
-    public Vector<Item> confirm() {
+    public LinkedList<Item> confirm() {
 
         return this.items;
     }

@@ -3,6 +3,7 @@ package com.System;
 import java.util.LinkedList;
 
 import com.ShippingCart.Item;
+import com.ShippingCart.ItemCart;
 
 public class ManageItems {
     private LinkedList<Item> items = new LinkedList<>();
@@ -28,7 +29,7 @@ public class ManageItems {
         }
     }
 
-    public Item chooseItem() {
+    public ItemCart chooseItem() {
         viewCatalog();
         System.out.println("Enter the number of the item you want to choose: ");
         Integer itemNumber = AppSystem.input.nextInt();
@@ -37,7 +38,15 @@ public class ManageItems {
             return null;
         }
         Item item = items.get(itemNumber - 1);
-        return item;
+        Integer pieces;
+        System.out.println("Enter the number of pieces you want to buy: ");
+        pieces = AppSystem.input.nextInt();
+        if (pieces > item.getPieces()) {
+            System.out.println("Invalid number of pieces!");
+            return null;
+        }
+        item.setPieces(item.getPieces() - pieces);
+        return new ItemCart(item, pieces);
     }
 
     // Methods for Admins
