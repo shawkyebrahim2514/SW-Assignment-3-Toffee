@@ -1,6 +1,7 @@
 package com.Authentications;
 
 import com.System.AppSystem;
+import com.User.Buyer;
 
 public class Login {
     private String password;
@@ -15,15 +16,18 @@ public class Login {
         return false;
     }
 
-    private boolean buyerLogin() {
+    private Buyer buyerLogin() {
         System.out.print("Enter your username: ");
-        username = AppSystem.input.next();
+        username = AppSystem.input.nextLine();
         System.out.print("Enter your password: ");
-        password = AppSystem.input.next();
-        return checkValidation();
+        password = AppSystem.input.nextLine();
+        if (checkValidation()) {
+            return AppSystem.users.getBuyer(username);
+        }
+        return null;
     }
 
-    public boolean login() {
+    public Buyer login() {
         System.out.println("What is your role?");
         System.out.println("1. Buyer");
         System.out.println("2. Admin");
@@ -34,13 +38,14 @@ public class Login {
             case 1:
                 return buyerLogin();
             case 2:
-                return adminLogin();
+                return null;
             case 3:
                 System.out.println("Thank you for using our system!");
                 System.exit(0);
+                return null;
             default:
                 System.out.println("Invalid choice!");
-                return false;
+                return null;
         }
     }
 }

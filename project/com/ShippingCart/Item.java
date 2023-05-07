@@ -1,7 +1,5 @@
 package com.ShippingCart;
 
-import java.util.Scanner;
-
 import com.System.AppSystem;
 
 public class Item {
@@ -14,7 +12,16 @@ public class Item {
     private double discount;
     private QuantityType quantityType;
 
-    public Item() {
+    public Item(String name, String brand, String description, String image, int pieces, double price,
+            double discount, QuantityType quantityType) {
+        this.name = name;
+        this.brand = brand;
+        this.description = description;
+        this.image = image;
+        this.pieces = pieces;
+        this.price = price;
+        this.discount = discount;
+        this.quantityType = quantityType;
     }
 
     public void view() {
@@ -77,10 +84,10 @@ public class Item {
                 String type = AppSystem.input.nextLine();
                 switch (type) {
                     case "kilos":
-                        setQuantityType(QuantityType.koios);
+                        setQuantityType(QuantityType.KILOS);
                         break;
                     case "packages":
-                        setQuantityType(QuantityType.packges);
+                        setQuantityType(QuantityType.PACKAGE);
                         break;
                     default:
                         break;

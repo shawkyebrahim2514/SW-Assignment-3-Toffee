@@ -31,8 +31,10 @@ public class AppSystem {
         int choice = Integer.parseInt(input.nextLine());
         switch (choice) {
             case 1:
-                if (login.login()) {
+                Buyer loggedBuyer = login.login();
+                if (loggedBuyer != null) {
                     System.out.println("Login successful!");
+                    currentBuyer = loggedBuyer;
                     displayBuyerMenu();
                 } else {
                     System.out.println("Login failed!");
@@ -66,7 +68,7 @@ public class AppSystem {
         System.out.println("2. Admin");
         System.out.println("3. Exit");
         System.out.print("Enter your choice: ");
-        int choice = input.nextInt();
+        int choice = Integer.parseInt(input.nextLine());
         switch (choice) {
             case 1:
                 displayBuyerMenu();
@@ -90,9 +92,10 @@ public class AppSystem {
         System.out.println("1. search items");
         System.out.println("2. View Catalog");
         System.out.println("3. Choose Item");
-        System.out.println("4. Exit");
+        System.out.println("4. add new order");
+        System.out.println("5. Exit");
         System.out.print("Enter your choice: ");
-        int choice = input.nextInt();
+        int choice = Integer.parseInt(input.nextLine());
         switch (choice) {
             case 1:
                 items.search();
@@ -104,13 +107,17 @@ public class AppSystem {
                 chooseItem();
                 break;
             case 4:
+                currentBuyer.addNewOrder();
+                break;
+            case 5:
                 System.out.println("Thank you for using our system!");
                 System.exit(0);
-                break;
+                return;
             default:
                 System.out.println("Invalid choice!");
                 break;
         }
+        displayBuyerMenu();
     }
 
     private void chooseItem() {

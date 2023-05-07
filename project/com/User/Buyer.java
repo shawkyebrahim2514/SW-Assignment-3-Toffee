@@ -49,6 +49,15 @@ public class Buyer extends User {
 
     public void addNewOrder() {
         LinkedList<ItemCart> items = this.cart.confirm();
+        for (ItemCart item : items) {
+            System.out.println("The number of pieces of this item: " + item.getPieces());
+            item.getItem().view();
+        }
+        System.out.println("Do you want to confirm this order? (y/n)");
+        String confirm = AppSystem.input.nextLine();
+        if (confirm.equals("n")) {
+            return;
+        }
         Order order = new Order(items);
         Double cost = order.calculateCost();
         Payment payment = new Payment(this);
@@ -57,7 +66,7 @@ public class Buyer extends User {
     }
 
     public void addToCart(ItemCart item) {
-
+        this.cart.addItem(item);
     }
 
     public void deleteFromCart(Item item) {
