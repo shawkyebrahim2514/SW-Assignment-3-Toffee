@@ -69,7 +69,7 @@ public class Buyer extends User {
         this.cart.addItem(item);
     }
 
-    public void deleteFromCart(Item item) {
+    public void deleteFromCart() {
 
     }
 
