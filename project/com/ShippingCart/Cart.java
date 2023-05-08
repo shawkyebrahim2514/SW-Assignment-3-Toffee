@@ -35,17 +35,17 @@ public class Cart {
         }
     }
 
-<<<<<<< Updated upstream
+    /**
+     * Clear the cart
+     */
     public void clearItems() {
         this.items.clear();
     }
 
-=======
     /**
      * Confirm the cart
      * @return the list of items in the cart
      */
->>>>>>> Stashed changes
     public LinkedList<ItemCart> confirm() {
         return this.items;
     }
