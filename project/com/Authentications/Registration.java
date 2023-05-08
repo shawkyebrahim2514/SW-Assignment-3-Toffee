@@ -15,10 +15,6 @@ public class Registration {
     public Registration() {
     }
 
-    private boolean checkValidation() {
-        return true;
-    }
-
     private void sendOTP() {
 
     }
@@ -29,7 +25,7 @@ public class Registration {
 
     public boolean register() {
         takeUserInfo();
-        if (checkValidation() && !AppSystem.users.checkExistUser(username, password)) {
+        if (!AppSystem.users.checkExistUser(username, password)) {
             Buyer newBuyer = new Buyer(name, email, phoneNumber, address, username, password);
             AppSystem.users.addNewBuyer(newBuyer);
             return true;
