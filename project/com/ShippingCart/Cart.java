@@ -25,6 +25,10 @@ public class Cart {
         }
     }
 
+    public void clearItems() {
+        this.items.clear();
+    }
+
     public LinkedList<ItemCart> confirm() {
         return this.items;
     }
