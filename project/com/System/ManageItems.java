@@ -15,9 +15,9 @@ public class ManageItems {
         // create 10 items for testing
         items.add(new Item("item1", "brand1", "description1", "image1", 10, 10, 0, QuantityType.PACKAGE));
         items.add(new Item("item2", "brand2", "description2", "image2", 10, 10, 0, QuantityType.PACKAGE));
+        items.add(new Item("item3", "brand3", "description3", "image3", 10, 10, 0, QuantityType.PACKAGE));
         items.add(new Item("item4", "brand4", "description4", "image4", 10, 10, 0, QuantityType.KILOS));
         items.add(new Item("item5", "brand5", "description5", "image5", 10, 10, 0, QuantityType.PACKAGE));
-        items.add(new Item("item3", "brand3", "description3", "image3", 10, 10, 0, QuantityType.PACKAGE));
         items.add(new Item("item6", "brand6", "description6", "image6", 10, 10, 0, QuantityType.KILOS));
         items.add(new Item("item7", "brand7", "description7", "image7", 10, 10, 0, QuantityType.KILOS));
         items.add(new Item("item8", "brand8", "description8", "image8", 10, 10, 0, QuantityType.PACKAGE));
@@ -68,6 +68,7 @@ public class ManageItems {
         Integer itemCounter = 1;
         for (Item item : items) {
             System.out.println("Item number: " + itemCounter);
+            System.out.println("\n");
             item.view();
             itemCounter++;
         }

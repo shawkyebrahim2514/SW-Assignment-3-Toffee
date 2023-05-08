@@ -13,10 +13,6 @@ public class Payment {
     private double payByCash(double cost) {
         System.out.println("The payment will be cassh on delivery :)");
         return 0;
-        /*
-         * Sorry but I don't know what should I write here as the customer will pay in
-         * cash :)
-         */
     }
 
     public void pay(double cost, String type) {
@@ -48,10 +44,10 @@ public class Payment {
     }
 
     private void chooseAddress() {
-        System.out.println("Would you like the order to be dlivered in the same address? : yes / no");
+        System.out.println("Would you like the order to be dlivered in the same address? : (y/n)");
         String choice = AppSystem.input.nextLine();
         String orderAddress;
-        if (choice.equals("yes")) {
+        if (choice.equals("y")) {
             orderAddress = this.currentBuyer.getAddress();
         } else {
             System.out.println("Please enter the address for your order: ");
