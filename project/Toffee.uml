@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="847.0" y="1932.5">com.User.Admin</node>
+    <node x="483.5" y="1643.5">com.User.Buyer</node>
+    <node x="217.0" y="943.5">com.ShippingCart.StatusType</node>
+    <node x="639.0" y="1261.5">com.ShippingCart.Payment</node>
+    <node x="405.0" y="1305.5">com.ShippingCart.Cart</node>
+    <node x="399.0" y="2423.5">com.Authentications.Login</node>
+    <node x="900.5" y="1217.5">com.User.User</node>
+    <node x="-62.5" y="1775.5">com.System.ManageItems</node>
+    <node x="-4.5" y="1294.5">com.ShippingCart.Order</node>
+    <node x="38.5" y="965.5">com.ShippingCart.ItemCart</node>
+    <node x="827.5" y="2401.5">com.System.ManageUsers</node>
+    <node x="-68.5" y="223.5">com.ShippingCart.Item</node>
+    <node x="619.0" y="2357.5">com.Authentications.Registration</node>
+    <node x="211.5" y="1283.5">com.ShippingCart.GiftVoucher</node>
+    <node x="-49.5" y="-14.5">com.ShippingCart.QuantityType</node>
+    <node x="619.0" y="2748.5">com.System.AppSystem</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.System.ManageUsers" target="com.User.Admin" relationship="TO_MANY">
+      <point x="-60.0" y="-105.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.ShippingCart.Cart" relationship="TO_ONE">
+      <point x="-113.0" y="-303.5" />
+      <point x="520.0" y="1607.0" />
+      <point x="453.0" y="1607.0" />
+      <point x="-60.0" y="61.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.Authentications.Registration" relationship="TO_ONE">
+      <point x="-40.0" y="-138.5" />
+      <point x="-40.0" y="149.5" />
+    </edge>
+    <edge source="com.User.Admin" target="com.User.User" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.5" />
+      <point x="893.0" y="1547.0" />
+      <point x="993.0" y="1547.0" />
+      <point x="0.0" y="149.5" />
+    </edge>
+    <edge source="com.Authentications.Registration" target="com.User.Buyer" relationship="CREATE">
+      <point x="0.0" y="-149.5" />
+      <point x="80.0" y="303.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.ShippingCart.Order" relationship="CREATE">
+      <point x="-40.0" y="-303.5" />
+      <point x="593.0" y="1527.0" />
+      <point x="53.0" y="1527.0" />
+      <point x="-40.0" y="72.5" />
+    </edge>
+    <edge source="com.System.ManageUsers" target="com.User.Buyer" relationship="TO_MANY">
+      <point x="-60.0" y="-105.5" />
+      <point x="893.0" y="2347.0" />
+      <point x="553.0" y="2347.0" />
+      <point x="-80.0" y="303.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.System.ManageItems" relationship="CREATE">
+      <point x="40.0" y="-138.5" />
+      <point x="753.0" y="2667.0" />
+      <point x="73.0" y="2667.0" />
+      <point x="40.0" y="171.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.ShippingCart.Payment" relationship="CREATE">
+      <point x="-40.0" y="-303.5" />
+      <point x="593.0" y="1507.0" />
+      <point x="693.0" y="1507.0" />
+      <point x="-60.0" y="105.5" />
+    </edge>
+    <edge source="com.System.ManageItems" target="com.ShippingCart.Order" relationship="TO_MANY">
+      <point x="40.0" y="-171.5" />
+      <point x="73.0" y="1747.0" />
+      <point x="133.0" y="1747.0" />
+      <point x="40.0" y="72.5" />
+    </edge>
+    <edge source="com.System.ManageItems" target="com.ShippingCart.Item" relationship="TO_MANY">
+      <point x="40.0" y="-171.5" />
+      <point x="73.0" y="1727.0" />
+      <point x="-27.0" y="1727.0" />
+      <point x="-27.0" y="947.0" />
+      <point x="113.0" y="947.0" />
+      <point x="60.0" y="303.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.Authentications.Login" relationship="TO_ONE">
+      <point x="-40.0" y="-138.5" />
+      <point x="673.0" y="2687.0" />
+      <point x="453.0" y="2687.0" />
+      <point x="-40.0" y="83.5" />
+    </edge>
+    <edge source="com.System.ManageItems" target="com.ShippingCart.ItemCart" relationship="CREATE">
+      <point x="-50.33333333333333" y="-171.5" />
+      <point x="-17.33333333333333" y="1747.0" />
+      <point x="-67.0" y="1747.0" />
+      <point x="-67.0" y="1267.0" />
+      <point x="76.66666666666669" y="1267.0" />
+      <point x="-36.333333333333314" y="61.5" />
+    </edge>
+    <edge source="com.ShippingCart.Order" target="com.ShippingCart.StatusType" relationship="TO_ONE">
+      <point x="0.0" y="-72.5" />
+      <point x="93.0" y="1207.0" />
+      <point x="313.0" y="1247.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.User.User" relationship="GENERALIZATION">
+      <point x="120.0" y="-303.5" />
+      <point x="753.0" y="1607.0" />
+      <point x="893.0" y="1607.0" />
+      <point x="893.0" y="1547.0" />
+      <point x="993.0" y="1547.0" />
+      <point x="0.0" y="149.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.ShippingCart.Order" relationship="TO_MANY">
+      <point x="-113.0" y="-303.5" />
+      <point x="520.0" y="1607.0" />
+      <point x="453.0" y="1607.0" />
+      <point x="453.0" y="1587.0" />
+      <point x="133.0" y="1587.0" />
+      <point x="40.0" y="72.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.ShippingCart.Cart" relationship="CREATE">
+      <point x="-40.0" y="-303.5" />
+      <point x="593.0" y="1507.0" />
+      <point x="573.0" y="1507.0" />
+      <point x="60.0" y="61.5" />
+    </edge>
+    <edge source="com.User.Buyer" target="com.ShippingCart.GiftVoucher" relationship="TO_MANY">
+      <point x="-113.0" y="-303.5" />
+      <point x="520.0" y="1607.0" />
+      <point x="453.0" y="1607.0" />
+      <point x="453.0" y="1547.0" />
+      <point x="293.0" y="1547.0" />
+      <point x="0.0" y="83.5" />
+    </edge>
+    <edge source="com.ShippingCart.ItemCart" target="com.ShippingCart.Item" relationship="TO_ONE">
+      <point x="0.0" y="-61.5" />
+      <point x="60.0" y="303.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.Authentications.Registration" relationship="CREATE">
+      <point x="40.0" y="-138.5" />
+      <point x="40.0" y="149.5" />
+    </edge>
+    <edge source="com.ShippingCart.Item" target="com.ShippingCart.QuantityType" relationship="TO_ONE">
+      <point x="0.0" y="-303.5" />
+      <point x="0.0" y="61.5" />
+    </edge>
+    <edge source="com.System.ManageUsers" target="com.User.Buyer" relationship="CREATE">
+      <point x="60.0" y="-105.5" />
+      <point x="1013.0" y="2327.0" />
+      <point x="713.0" y="2327.0" />
+      <point x="80.0" y="303.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.Authentications.Login" relationship="CREATE">
+      <point x="40.0" y="-138.5" />
+      <point x="753.0" y="2667.0" />
+      <point x="533.0" y="2667.0" />
+      <point x="40.0" y="83.5" />
+    </edge>
+    <edge source="com.System.ManageItems" target="com.ShippingCart.Item" relationship="CREATE">
+      <point x="-50.33333333333333" y="-171.5" />
+      <point x="-17.33333333333333" y="1747.0" />
+      <point x="-67.0" y="1747.0" />
+      <point x="-67.0" y="1727.0" />
+      <point x="-107.0" y="1727.0" />
+      <point x="-107.0" y="927.0" />
+      <point x="-7.0" y="927.0" />
+      <point x="-60.0" y="303.5" />
+    </edge>
+    <edge source="com.ShippingCart.Payment" target="com.User.Buyer" relationship="TO_ONE">
+      <point x="60.0" y="105.5" />
+      <point x="813.0" y="1527.0" />
+      <point x="673.0" y="1527.0" />
+      <point x="40.0" y="-303.5" />
+    </edge>
+    <edge source="com.System.ManageItems" target="com.ShippingCart.Order" relationship="CREATE">
+      <point x="-50.33333333333333" y="-171.5" />
+      <point x="-17.33333333333333" y="1747.0" />
+      <point x="-67.0" y="1747.0" />
+      <point x="-67.0" y="1547.0" />
+      <point x="53.0" y="1547.0" />
+      <point x="-40.0" y="72.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.System.ManageUsers" relationship="TO_ONE">
+      <point x="-40.0" y="-138.5" />
+      <point x="673.0" y="2687.0" />
+      <point x="893.0" y="2687.0" />
+      <point x="-60.0" y="105.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.System.ManageItems" relationship="TO_ONE">
+      <point x="-40.0" y="-138.5" />
+      <point x="673.0" y="2687.0" />
+      <point x="-7.0" y="2687.0" />
+      <point x="-40.0" y="171.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.System.ManageUsers" relationship="CREATE">
+      <point x="40.0" y="-138.5" />
+      <point x="753.0" y="2667.0" />
+      <point x="933.0" y="2667.0" />
+      <point x="-20.0" y="105.5" />
+    </edge>
+    <edge source="com.ShippingCart.Order" target="com.ShippingCart.ItemCart" relationship="TO_MANY">
+      <point x="0.0" y="-72.5" />
+      <point x="93.0" y="1227.0" />
+      <point x="153.0" y="1227.0" />
+      <point x="40.0" y="61.5" />
+    </edge>
+    <edge source="com.System.AppSystem" target="com.User.Buyer" relationship="TO_ONE">
+      <point x="-40.0" y="-138.5" />
+      <point x="673.0" y="2687.0" />
+      <point x="373.0" y="2687.0" />
+      <point x="373.0" y="2407.0" />
+      <point x="553.0" y="2407.0" />
+      <point x="-80.0" y="303.5" />
+    </edge>
+    <edge source="com.ShippingCart.Cart" target="com.ShippingCart.ItemCart" relationship="TO_MANY">
+      <point x="0.0" y="-61.5" />
+      <point x="513.0" y="1267.0" />
+      <point x="153.0" y="1267.0" />
+      <point x="40.0" y="61.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.8038156603489466" showDependencies="true" x="1034.1311945985572" y="2534.1045324631905" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

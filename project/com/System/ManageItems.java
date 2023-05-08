@@ -10,7 +10,9 @@ import com.ShippingCart.QuantityType;
 public class ManageItems {
     private LinkedList<Item> items = new LinkedList<>();
     private LinkedList<Order> orders = new LinkedList<>();
-
+    /**
+     * Constructor
+     */
     public ManageItems() {
         // create 10 items for testing
         items.add(new Item("item1", "brand1", "description1", "image1", 10, 10, 0, QuantityType.PACKAGE));
@@ -53,6 +55,9 @@ public class ManageItems {
     }
 
     // Methods for Users
+    /**
+     * Search for an item
+     */
     public void search() {
         System.out.println("Enter the name of the item you want to search: ");
         String itemName = AppSystem.input.nextLine();
@@ -63,7 +68,9 @@ public class ManageItems {
             }
         }
     }
-
+    /**
+     * View the catalog of items
+     */
     public void viewCatalog() {
         Integer itemCounter = 1;
         for (Item item : items) {
@@ -73,7 +80,10 @@ public class ManageItems {
             itemCounter++;
         }
     }
-
+    /**
+     * Choose an item from the catalog
+     * @return the item chosen
+     */
     public ItemCart chooseItem() {
         viewCatalog();
         System.out.println("Enter the number of the item you want to choose: ");
@@ -94,32 +104,54 @@ public class ManageItems {
         return new ItemCart(item, pieces);
     }
 
+    /**
+     * Add a new order
+     * @param order the order to be added
+     */
     public void addNewOrder(Order order) {
         orders.add(order);
     }
 
     // Methods for Admins
+    /**
+     * Add new items to the catalog
+     */
     public void addItems() {
     }
 
+    /**
+     * Delete items from the catalog
+     */
     public void deleteItems() {
     }
-
+    /**
+     * Update the items in the catalog
+     */
     public void updateItems() {
     }
-
+    /**
+     * Update the catalog
+     */
     public void updateCatalog() {
     }
-
+    /**
+     * View the orders
+     */
     public void viewOrders() {
     }
-
+    /**
+     * Set the loyalty points
+     */
     public void setLoyaltyPoints() {
     }
-
+    /**
+     * Set the restrictions
+     */
     public void putRestrictions() {
     }
-
+    /**
+     * View the items statistics
+     */
     public void viewStatistics() {
     }
 }

@@ -14,11 +14,16 @@ public class AppSystem {
     private Login login;
     public static ManageItems items = new ManageItems();
     public static ManageUsers users = new ManageUsers();
-
+    /**
+     * Constructor
+     */
     public AppSystem() {
         run();
     }
 
+    /**
+     * Display the main menu
+     */
     private void run() {
         login = new Login();
         registration = new Registration();
@@ -62,6 +67,9 @@ public class AppSystem {
         run();
     }
 
+    /**
+     * After login, display the type of the user menu
+     */
     public void displayMenu() {
         System.out.println("What is your role?");
         System.out.println("1. Buyer");
@@ -87,6 +95,9 @@ public class AppSystem {
         }
     }
 
+    /**
+     * Display the buyer menu
+     */
     private void displayBuyerMenu() {
         System.out.println("Which action do you want to perform?");
         System.out.println("1. search items");
@@ -120,6 +131,9 @@ public class AppSystem {
         displayBuyerMenu();
     }
 
+    /**
+     * Choose an item from the catalog
+     */
     private void chooseItem() {
         ItemCart itemCart = items.chooseItem();
         if (itemCart == null) {
@@ -128,6 +142,9 @@ public class AppSystem {
         currentBuyer.addToCart(itemCart);
     }
 
+    /**
+     * Display the admin menu
+     */
     private void displayAdminMenu() {
         System.out.println("There is no admin in this system yet!");
     }

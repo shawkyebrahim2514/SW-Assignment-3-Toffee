@@ -12,17 +12,34 @@ public class Registration {
     private String password;
     private String confirmPassword;
 
+
+    /**
+     * Constructor
+     */
     public Registration() {
     }
 
+    /**
+     * Send OTP to the user's email
+     */
     private void sendOTP() {
 
     }
+
+    /**
+     * Check if the OTP is valid
+     * @param OTP the OTP to be checked
+     * @return true if the OTP is valid, false otherwise
+     */
 
     private boolean checkOTP(int OTP) {
         return false;
     }
 
+    /**
+     * Register as buyer
+     * @return true if the registration is successful, false otherwise
+     */
     public boolean register() {
         takeUserInfo();
         if (!AppSystem.users.checkExistUser(username, password)) {
@@ -33,6 +50,9 @@ public class Registration {
         return false;
     }
 
+    /**
+     * Take the user's information and check if it is valid
+     */
     private void takeUserInfo() {
         System.out.println("Please enter the following information: ");
 
