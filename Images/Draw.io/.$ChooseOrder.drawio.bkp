@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-05-10T20:46:56.615Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="U4pngba9S9eXt40Kb3Vj" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-05-05T16:59:54.236Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="EUFGaES5beCTsaI9H81p" version="21.1.2" type="device">
   <diagram name="Page-1" id="jpT_OTfUY6JzhKqUOGub">
-    <mxGraphModel dx="1036" dy="606" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="500" math="0" shadow="0">
+    <mxGraphModel dx="288" dy="168" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="500" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -42,7 +42,7 @@
             <mxPoint x="367" y="116" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="v6ifis_MIy_HCVxCKEuu-34" value="confirmCart()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="v6ifis_MIy_HCVxCKEuu-33" vertex="1" connectable="0">
+        <mxCell id="v6ifis_MIy_HCVxCKEuu-34" value="confirmItemsInCart()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="v6ifis_MIy_HCVxCKEuu-33" vertex="1" connectable="0">
           <mxGeometry x="0.0761" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -63,7 +63,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="v6ifis_MIy_HCVxCKEuu-38" value="LinkedList&amp;lt;ItemCart&amp;gt;&lt;br&gt;= confirm()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="v6ifis_MIy_HCVxCKEuu-37" vertex="1" connectable="0">
+        <mxCell id="v6ifis_MIy_HCVxCKEuu-38" value="items[] = confirm()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="v6ifis_MIy_HCVxCKEuu-37" vertex="1" connectable="0">
           <mxGeometry x="0.0761" y="2" relative="1" as="geometry">
             <mxPoint x="-2" as="offset" />
           </mxGeometry>
@@ -206,7 +206,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="pC6OAmN3crTO7QJNSAjl-2" value="calculateCost()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pC6OAmN3crTO7QJNSAjl-1" vertex="1" connectable="0">
+        <mxCell id="pC6OAmN3crTO7QJNSAjl-2" value="pay()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="pC6OAmN3crTO7QJNSAjl-1" vertex="1" connectable="0">
           <mxGeometry x="0.0761" y="2" relative="1" as="geometry">
             <mxPoint x="-2" as="offset" />
           </mxGeometry>

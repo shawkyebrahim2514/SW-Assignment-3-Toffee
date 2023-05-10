@@ -67,6 +67,7 @@ public class ManageItems {
                 return;
             }
         }
+        System.out.println("Item not found!");
     }
     /**
      * View the catalog of items
