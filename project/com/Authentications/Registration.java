@@ -2,6 +2,7 @@ package com.Authentications;
 
 import com.System.*;
 import com.User.Buyer;
+import com.OTP.*;
 
 public class Registration {
     private String name;
@@ -72,6 +73,15 @@ public class Registration {
             email = AppSystem.input.nextLine();
         }
 
+        OTP.sendOTP(email);
+
+        System.out.println("OTP code sent to your email: ");
+        String otp = AppSystem.input.nextLine();
+
+        while(!otp.equals(OTP.getOTP())){
+            System.out.println("OTP not matched re-enter the correct code: ");
+            otp = AppSystem.input.nextLine();
+        }
         System.out.println("Phone Number: ");
         phoneNumber = AppSystem.input.nextLine();
 
