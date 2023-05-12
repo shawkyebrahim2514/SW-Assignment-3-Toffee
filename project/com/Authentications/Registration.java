@@ -1,6 +1,5 @@
 package com.Authentications;
 
-import com.Authentications.OTP.*;
 import com.System.*;
 import com.User.Buyer;
 
@@ -25,12 +24,9 @@ public class Registration {
      */
     public boolean register() {
         takeUserInfo();
-        if (!AppSystem.users.checkExistUser(username, password)) {
-            Buyer newBuyer = new Buyer(name, email, phoneNumber, address, username, password);
-            AppSystem.users.addNewBuyer(newBuyer);
-            return true;
-        }
-        return false;
+        Buyer newBuyer = new Buyer(name, email, phoneNumber, address, username, password);
+        AppSystem.users.addNewBuyer(newBuyer);
+        return true;
     }
 
     /**
@@ -38,15 +34,15 @@ public class Registration {
      */
     private void takeUserInfo() {
         System.out.println("Please enter the following information: ");
-        takeName();
-        takeEmail();
-        OTP.sendOTP(email);
-        takeOTP();
-        takePhoneNumber();
-        takeAddress();
         takeUsername();
         takePassword();
         checkPasswordConfirmation();
+        takeEmail();
+        OTP.sendOTP(email);
+        takeOTP();
+        takeName();
+        takePhoneNumber();
+        takeAddress();
     }
 
     /**
@@ -115,7 +111,7 @@ public class Registration {
     private void takeUsername() {
         System.out.println("Username: ");
         username = AppSystem.input.nextLine();
-        while (!username.matches("^[A-Za-z0-9_]+$")) {
+        while (!username.matches("^[A-Za-z0-9_]+$") || AppSystem.users.checkExistBuyer(username)) {
             System.out.println("Invalid Format, Please re-enter the username: ");
             username = AppSystem.input.nextLine();
         }
