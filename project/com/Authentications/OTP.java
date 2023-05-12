@@ -1,4 +1,4 @@
-package com.OTP;
+package com.Authentications;
 
 import java.util.Random;
 import java.util.Properties;
